@@ -26,3 +26,17 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .Hero {
+    height: 60vh;
+    .hero-content {
+      .heading {
+        font-size: 2rem;
+      }
+      .subheading {
+        font-size: 1rem;
+      }
+    }
+  }
+}
