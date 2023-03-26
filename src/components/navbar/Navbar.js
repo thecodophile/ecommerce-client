@@ -5,7 +5,7 @@ import { BsCart2 } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <div className="Navbar">
+    <nav className="Navbar">
       <div className="container nav-container">
         <div className="nav-left">
           <ul className="link-group">
@@ -38,7 +38,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
