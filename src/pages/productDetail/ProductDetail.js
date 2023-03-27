@@ -1,13 +1,18 @@
 import React from "react";
+import { useParams } from "react-router";
 import "./ProductDetail.scss";
 import dummyImg from "../../assets/naruto.jpeg";
 
 const ProductDetail = () => {
+  const params = useParams();
+
+  console.log("params", params);
+
   return (
     <div className="ProductDetail">
       <div className="container">
         <div className="product-layout">
-          <div className="product-img center">
+          <div className="product-img ">
             <img src={dummyImg} alt="product img" />
           </div>
           <div className="product-info">
