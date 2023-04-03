@@ -8,6 +8,7 @@ import Categories from "./pages/collection/Collection";
 import Home from "./pages/home/Home";
 import ProductDetail from "./pages/productDetail/ProductDetail";
 import { fetchCategories } from "./redux/categorySlice";
+import Error from "./components/errorComponent/Error";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function App() {
           <Route path="/category/:categoryId?" element={<Categories />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
           <Route path="/payments/:status" element={<Payments />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </main>
       <Footer />
