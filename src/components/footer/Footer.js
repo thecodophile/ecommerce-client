@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import "./Footer.scss";
 import creditCardImg from "../../assets/creditcardicons.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,16 +18,24 @@ const Footer = () => {
             <h3 className="title">Follow us</h3>
             <ul className="follow">
               <li className="hover-link center">
-                <AiOutlineInstagram />
+                <Link to={"https://www.instagram.com/artistsomnath/"}>
+                  <AiOutlineInstagram className="social-logo" />
+                </Link>
               </li>
               <li className="hover-link center">
-                <AiOutlineFacebook />
+                <Link to={"https://www.facebook.com/santu.dey.50596/"}>
+                  <AiOutlineFacebook className="social-logo" />
+                </Link>
               </li>
               <li className="hover-link center">
-                <AiOutlineTwitter />
+                <Link to={"https://twitter.com/thecodophile"}>
+                  <AiOutlineTwitter className="social-logo" />
+                </Link>
               </li>
               <li className="hover-link center">
-                <AiOutlineMail />
+                <Link to={"mailto:sdey.aklakhi@gmail.com"}>
+                  <AiOutlineMail className="social-logo" />
+                </Link>
               </li>
             </ul>
           </div>

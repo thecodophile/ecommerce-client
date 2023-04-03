@@ -5,6 +5,8 @@
   flex-grow: 0;
   border: 1px solid rgba($color: #000000, $alpha: 0.1);
   align-self: stretch;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
   .product-container {
     .product-img {

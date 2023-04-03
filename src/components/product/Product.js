@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import "./Product.scss";
-import dummyImg from "../../assets/naruto.jpeg";
 
 const Product = ({ product }) => {
   const navigate = useNavigate();

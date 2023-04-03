@@ -1,5 +1,6 @@
 .Footer {
-  background-color: rgba($color: #000000, $alpha: 0.05);
+  // background-color: rgba($color: #000000, $alpha: 0.05);
+  background-color: var(--footer-color);
   padding-block: 20px;
   margin-top: 80px;
 
@@ -23,6 +24,13 @@
           width: 36px;
           height: 36px;
           border-radius: 50%;
+          .social-logo {
+            color: black;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.2rem;
+          }
 
           &:hover {
             background-color: white;

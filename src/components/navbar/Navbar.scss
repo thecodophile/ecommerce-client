@@ -1,5 +1,5 @@
 .Navbar {
-  background-color: var(--primary-text-color);
+  background-color: var(--navbar-color);
   height: 80px;
   z-index: 99;
   color: white;
@@ -30,7 +30,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      background-color: var(--primary-text-color);
+      // background-color: var(--primary-text-color);
 
       .banner {
         color: white;
