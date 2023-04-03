@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+import Payments from "./components/payments/Payments";
 import Categories from "./pages/collection/Collection";
 import Home from "./pages/home/Home";
 import ProductDetail from "./pages/productDetail/ProductDetail";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/category/:categoryId?" element={<Categories />} />
           <Route path="/products/:productId" element={<ProductDetail />} />
+          <Route path="/payments/:status" element={<Payments />} />
         </Routes>
       </main>
       <Footer />
