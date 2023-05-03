@@ -1,0 +1,24 @@
+.Offline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 100px 20px;
+
+  .content {
+    height: 100%;
+
+    .offline-logo {
+      font-size: 2rem;
+    }
+    ul {
+      li {
+        list-style: square;
+        color: var(--secondary-text-color);
+      }
+      padding-bottom: 10px;
+    }
+    .message {
+      color: var(--accent-color);
+    }
+  }
+}

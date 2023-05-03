@@ -5,6 +5,8 @@ import Category from "../../components/category/Category";
 import Product from "../../components/product/Product";
 import { axiosClient } from "../../utils/axiosClient";
 import { useSelector } from "react-redux";
+import useOnline from "../../utils/useOnline";
+import Offline from "../../components/offline/Offline";
 
 const Home = () => {
   const categories = useSelector((state) => state.categoryReducer.categories);
@@ -21,6 +23,13 @@ const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const online = useOnline();
+
+  if (!online) {
+    return <Offline />;
+  }
+
   return (
     <div className="Home">
       <Hero />

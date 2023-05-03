@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./ProductDetail.scss";
-import dummyImg from "../../assets/naruto.jpeg";
 import { axiosClient } from "../../utils/axiosClient";
 import Loader from "../../components/loader/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../redux/cartSlice";
+import useOnline from "../../utils/useOnline";
+import Offline from "../../components/offline/Offline";
 
 const ProductDetail = () => {
   const params = useParams();
@@ -29,6 +30,12 @@ const ProductDetail = () => {
     setProduct(null);
     fetchData();
   }, [params]);
+
+  const online = useOnline();
+
+  if (!online) {
+    return <Offline />;
+  }
 
   if (!product) {
     return <Loader />;

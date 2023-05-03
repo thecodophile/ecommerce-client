@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router";
 import Product from "../../components/product/Product";
 import { axiosClient } from "../../utils/axiosClient";
 import "./Collection.scss";
+import useOnline from "../../utils/useOnline";
+import Offline from "../../components/offline/Offline";
 
 function Collection() {
   const navigate = useNavigate();
@@ -46,6 +48,12 @@ function Collection() {
   //   const sortKey = e.target.value;
   //   setSortBy(sortKey);
   // }
+
+  const online = useOnline();
+
+  if (!online) {
+    return <Offline />;
+  }
 
   return (
     <div className="Categories">
